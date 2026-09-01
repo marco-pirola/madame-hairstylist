@@ -805,11 +805,36 @@ h2 {
   display: inline-flex;
   padding: 7px 10px;
   border-radius: 999px;
-  background: rgba(217, 152, 115, 0.16);
-  color: #f1b08f;
+  background: rgba(150, 200, 170, 0.16);
+  color: #a8dcc0;
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.hours-table {
+  width: 100%;
+  margin: 22px 0 26px;
+  border-collapse: collapse;
+}
+
+.hours-table th,
+.hours-table td {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  text-align: left;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hours-table td {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.hours-table .closed td,
+.hours-table .closed th {
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .hours-card h3 {

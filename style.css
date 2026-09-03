@@ -1,18 +1,18 @@
 :root {
-  --bg: #faf6f1;
-  --bg-elevata: #f2e9dd;
-  --bg-card: #ffffff;
+  --bg: #F2F6F5;
+  --bg-elevata: #D4DFDD;
+  --bg-card: #FFFFFF;
 
-  --testo: #2b241d;
-  --testo-attenuato: #6b5f52;
+  --testo: #232B2B;
+  --testo-attenuato: #5F6B69;
 
-  --accento: #c17a5a;
-  --accento-vivo: #d99873;
-  --accento-tenue: rgba(193, 122, 90, 0.16);
+  --accento: #749393;
+  --accento-vivo: #C89B51;
+  --accento-tenue: rgba(116, 147, 147, 0.16);
 
-  --linea: rgba(43, 36, 29, 0.1);
+  --linea: rgba(35, 43, 43, 0.1);
 
-  --shadow: 0 18px 50px rgba(87, 61, 43, 0.08);
+  --shadow: 0 18px 50px rgba(35, 43, 43, 0.08);
 
   --serif: "Playfair Display", Georgia, serif;
   --sans: "DM Sans", Arial, sans-serif;
@@ -359,7 +359,7 @@ h2 em {
 
   border: 1px solid rgba(193, 122, 90, 0.26);
 
-  transform: rotate(2deg);
+  transform: rotate(0deg);
 
   background: linear-gradient(
     145deg,
@@ -1331,7 +1331,7 @@ h2 {
 
     padding: 14px;
 
-    transform: rotate(1.5deg);
+    transform: rotate(0deg);
   }
 
   .hero-visual-label {

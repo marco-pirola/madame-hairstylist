@@ -22,6 +22,7 @@
   >
 
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="prenota.css">
 </head>
 
 <body id="top">
@@ -1899,6 +1900,79 @@
     </section>
 
 
+    <!-- RICHIEDI UN APPUNTAMENTO -->
+    <section class="section prenota-section" id="prenota">
+      <div class="container prenota-grid">
+        <div class="reveal">
+          <p class="section-label">Richiedi un appuntamento</p>
+          <h2>Scegli quando,<br><em>conferma Marta.</em></h2>
+          <p class="prenota-lead">
+            Compila i campi e si apre WhatsApp con il messaggio già pronto. Marta ti risponde per
+            confermare o proporti un altro orario. Nessun dato viene salvato sul sito.
+          </p>
+        </div>
+
+        <form class="prenota-card reveal reveal-delay" id="prenota-form" novalidate>
+          <div class="prenota-field">
+            <label for="prenota-nome">Il tuo nome</label>
+            <input id="prenota-nome" name="nome" type="text" autocomplete="given-name" maxlength="60" aria-describedby="prenota-err-nome">
+            <p class="prenota-error" id="prenota-err-nome" role="alert"></p>
+          </div>
+
+          <div class="prenota-field">
+            <label for="prenota-servizio">Servizio</label>
+            <select id="prenota-servizio" name="servizio" aria-describedby="prenota-err-servizio">
+              <option value="">Scegli…</option>
+              <option>Piega</option>
+              <option>Taglio</option>
+              <option>Trattamento forma</option>
+              <option>Acconciatura</option>
+              <option>Barba e capelli uomo</option>
+              <option>Colore</option>
+              <option>Effetti luce</option>
+              <option>Trattamenti specifici per capelli</option>
+              <option>Taglio bambini e teenager</option>
+              <option>Depilazione viso</option>
+              <option>Non so, ho bisogno di un consiglio</option>
+            </select>
+            <p class="prenota-error" id="prenota-err-servizio" role="alert"></p>
+          </div>
+
+          <div class="prenota-field">
+            <label for="prenota-giorno">Giorno preferito</label>
+            <input id="prenota-giorno" name="giorno" type="date" aria-describedby="prenota-hint-giorno prenota-err-giorno">
+            <p class="prenota-hint" id="prenota-hint-giorno">Chiuso lunedì e domenica.</p>
+            <p class="prenota-error" id="prenota-err-giorno" role="alert"></p>
+          </div>
+
+          <fieldset class="prenota-field prenota-fascia" aria-describedby="prenota-err-fascia">
+            <legend>Orario</legend>
+            <div class="prenota-choices">
+              <label><input type="radio" name="fascia" value="mattina"> <span>Mattina</span></label>
+              <label><input type="radio" name="fascia" value="pomeriggio"> <span>Pomeriggio</span></label>
+              <label><input type="radio" name="fascia" value="indifferente" checked> <span>Indifferente</span></label>
+            </div>
+            <p class="prenota-error" id="prenota-err-fascia" role="alert"></p>
+          </fieldset>
+
+          <div class="prenota-field">
+            <label for="prenota-note">Note <span class="prenota-opt">(facoltative)</span></label>
+            <textarea id="prenota-note" name="note" rows="3" maxlength="300" placeholder="Es. capelli lunghi, colore già fatto, prima volta da Madame…"></textarea>
+          </div>
+
+          <button class="btn btn-primary btn-full" type="submit">
+            Invia richiesta su WhatsApp
+            <span aria-hidden="true">↗</span>
+          </button>
+
+          <p class="prenota-status" id="prenota-status" role="status" aria-live="polite"></p>
+          <a class="prenota-fallback" id="prenota-fallback" href="#" target="_blank" rel="noopener" hidden>
+            Non si è aperto WhatsApp? Tocca qui
+          </a>
+        </form>
+      </div>
+    </section>
+
     <!-- FAQ -->
 
     <section
@@ -1941,7 +2015,9 @@
 
             <p>
               Le prenotazioni vengono gestite esclusivamente
-              su WhatsApp al numero 351 446 0171.
+              su WhatsApp al numero 351 446 0171. Puoi anche usare
+              il modulo "Richiedi un appuntamento" qui sopra: si apre
+              WhatsApp con il messaggio già pronto.
             </p>
 
           </details>
@@ -2171,6 +2247,7 @@
 
 
 <script src="script.js"></script>
+<script src="prenota.js" defer></script>
 
 </body>
 </html>
